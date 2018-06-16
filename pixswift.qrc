@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file alias="PIXMainWindow.qml">PIXsrc/ui/PIXMainWindow.qml</file>
+        <file alias="PIXSplashScreen.qml">PIXsrc/ui/PIXSplashScreen.qml</file>
+        <file alias="PIXswift/Controls/PIXButton.qml">PIXsrc/QMLControls/PIXButton.qml</file>
+    </qresource>
+</RCC>

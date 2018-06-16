@@ -149,8 +149,8 @@ MainWindow::MainWindow()
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
     _mainQmlWidgetHolder->setContextPropertyObject("controller", this);
     _mainQmlWidgetHolder->setContextPropertyObject("debugMessageModel", AppMessages::getModel());
-    _mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/MainWindowHybrid.qml"));
-
+    //_mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/MainWindowHybrid.qml"));
+    _mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/PIXMainWindow.qml"));
     // Image provider
     QQuickImageProvider* pImgProvider = dynamic_cast<QQuickImageProvider*>(qgcApp()->toolbox()->imageProvider());
     _mainQmlWidgetHolder->getEngine()->addImageProvider(QLatin1String("QGCImages"), pImgProvider);

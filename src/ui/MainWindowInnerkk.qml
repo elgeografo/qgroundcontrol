@@ -40,11 +40,12 @@ Item {
     readonly property string _planViewSource:       "PlanView.qml"
     readonly property string _analyzeViewSource:    "AnalyzeView.qml"
 
-    onHeightChanged: {
+    onHeightChanged: {/*
         //-- We only deal with the available height if within the Fly or Plan view
         if(!setupViewLoader.visible) {
             ScreenTools.availableHeight = parent.height - toolBar.height
         }
+        */
     }
 
     function disableToolbar() {
@@ -78,7 +79,7 @@ Item {
         toolBar.checkSettingsButton()
     }
 
-    function showSetupView() {
+    function showSetupView() {/*
         mainWindow.enableToolbar()
         rootLoader.sourceComponent = null
         if(currentPopUp) {
@@ -92,7 +93,7 @@ Item {
         }
         setupViewLoader.visible  = true
         toolBar.checkSetupButton()
-    }
+    */}
 
     function showPlanView() {
         mainWindow.enableToolbar()
@@ -153,7 +154,7 @@ Item {
         }
     }
 
-    MessageDialog {
+    MessageDialog {/*
         id:                 unsavedMissionCloseDialog
         title:              qsTr("%1 close").arg(QGroundControl.appName)
         text:               qsTr("You have a mission edit in progress which has not been saved/sent. If you close you will lose changes. Are you sure you want to close?")
@@ -170,9 +171,9 @@ Item {
                 activeConnectionsCloseDialog.check()
             }
         }
-    }
+    */}
 
-    MessageDialog {
+    MessageDialog {/*
         id:                 activeConnectionsCloseDialog
         title:              qsTr("%1 close").arg(QGroundControl.appName)
         text:               qsTr("There are still active connections to vehicles. Do you want to disconnect these before closing yoho?")
@@ -188,7 +189,7 @@ Item {
                 finishCloseProcess()
             }
         }
-    }
+    */}
 
     Timer {
         id:         delayedWindowCloseTimer
@@ -220,11 +221,13 @@ Item {
     }
 
     onFormatedMessageChanged: {
+        /*
         if(messageArea.visible) {
             messageText.append(formatMessage(formatedMessage))
             //-- Hack to scroll down
             messageFlick.flick(0,-500)
         }
+        */
     }
 
     function showMessageArea() {
@@ -268,7 +271,7 @@ Item {
 
     //-- Main UI
 
-    MainToolBar {
+    MainToolBar {/*
         id:                 toolBar
         height:             ScreenTools.toolbarHeight
         visible:            !QGroundControl.videoManager.fullScreen
@@ -302,9 +305,9 @@ Item {
             onPressed:      { mouse.accepted = true; }
             onReleased:     { mouse.accepted = true; }
         }
-    }
+    */}
 
-    PlanToolBar {
+    PlanToolBar {/*
         id:                 planToolBar
         height:             ScreenTools.toolbarHeight
         anchors.left:       parent.left
@@ -316,6 +319,7 @@ Item {
             planToolBar.visible = false
             mainWindow.showFlyView()
         }
+        */
     }
 
     Loader {
@@ -353,7 +357,8 @@ Item {
         property var toolbar: planToolBar
     }
 
-    FlightDisplayView {
+    FlightDisplayView {/*
+
         id:                 flightView
         anchors.fill:       parent
         visible:            true
@@ -364,7 +369,8 @@ Item {
             id:             rootVideoLoader
             anchors.centerIn: parent
         }
-    }
+
+    */}
 
     Loader {
         id:                 analyzeViewLoader
@@ -400,7 +406,7 @@ Item {
 
     //-------------------------------------------------------------------------
     //-- System Message Area
-    Rectangle {
+    Rectangle {/*
         id:                 messageArea
         function close() {
             currentPopUp = null
@@ -481,11 +487,13 @@ Item {
                 }
             }
         }
-    }
+    */}
 
     //-------------------------------------------------------------------------
     //-- Critical Message Area
-    Rectangle {
+
+    Rectangle {/*
+
         id:                         criticalMmessageArea
         width:                      mainWindow.width  * 0.55
         height:                     Math.min(criticalMessageText.height + _textMargins * 2, ScreenTools.defaultFontPixelHeight * 6)
@@ -588,6 +596,7 @@ Item {
                 }
             }
         }
+        */
     }
 
     //-------------------------------------------------------------------------

@@ -78,11 +78,17 @@ WindowsBuild {
 # Branding
 #
 
-QGC_APP_NAME        = "QGroundControl"
-QGC_ORG_NAME        = "QGroundControl.org"
+#QGC_APP_NAME        = "QGroundControl"
+#QGC_ORG_NAME        = "QGroundControl.org"
+#QGC_ORG_DOMAIN      = "org.qgroundcontrol"
+#QGC_APP_DESCRIPTION = "Open source ground control app provided by QGroundControl dev team"
+#QGC_APP_COPYRIGHT   = "Copyright (C) 2017 QGroundControl Development Team. All rights reserved."
+
+QGC_APP_NAME        = "PIXswift"
+QGC_ORG_NAME        = "pixswift.com"
 QGC_ORG_DOMAIN      = "org.qgroundcontrol"
-QGC_APP_DESCRIPTION = "Open source ground control app provided by QGroundControl dev team"
-QGC_APP_COPYRIGHT   = "Copyright (C) 2017 QGroundControl Development Team. All rights reserved."
+QGC_APP_DESCRIPTION = "Open source ground control app provided by PIXswift dev team"
+QGC_APP_COPYRIGHT   = "Copyright (C) 2017 PIXswift Development Team. All rights reserved."
 
 WindowsBuild {
     QGC_INSTALLER_ICON          = "WindowsQGC.ico"
@@ -291,8 +297,8 @@ CustomBuild {
         RESOURCES += $$PWD/qgcresources.qrc
     }
 } else {
-    DEFINES += QGC_APPLICATION_NAME=\"\\\"QGroundControl\\\"\"
-    DEFINES += QGC_ORG_NAME=\"\\\"QGroundControl.org\\\"\"
+    DEFINES += QGC_APPLICATION_NAME=\"\\\"PIXswift\\\"\"
+    DEFINES += QGC_ORG_NAME=\"\\\"PIXswift.com\\\"\"
     DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
     RESOURCES += \
         $$PWD/qgroundcontrol.qrc \
@@ -1100,3 +1106,9 @@ contains (CONFIG, QGC_DISABLE_BUILD_SETUP) {
 #
 
 include(QGCInstaller.pri)
+
+DISTFILES += \
+    README-LIM.md
+
+RESOURCES += \
+    pixswift.qrc

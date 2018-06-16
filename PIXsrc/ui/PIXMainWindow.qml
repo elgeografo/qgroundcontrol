@@ -29,7 +29,23 @@ Item {
         mainWindowInner.item.showMessage(message)
     }
 
+    Label{
+        text: "Hola Mundo"
+    }
+    //parent{title:"PixSwift"}
 
+    Loader {
+        source:     "PIXSplashScreen.qml"
+        Connections {
+            //target: mainWindowInner.item
+
+            onReallyClose: controller.reallyClose()
+        }
+
+    }
+
+
+    /*
     Loader {
         id:             mainWindowInner
         anchors.fill:   parent
@@ -41,5 +57,6 @@ Item {
             onReallyClose: controller.reallyClose()
         }
     }
+    */
 
 }
