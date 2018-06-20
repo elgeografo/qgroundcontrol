@@ -4,7 +4,7 @@ En este fichero
 
      /media/luis/data/lim/projects/qgroundcontrol/src/ui/MainWindow.cc
 
-Buscamos la siguiente liena
+Buscamos la siguiente linea
 
     //_mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/MainWindowHybrid.qml"));
 
