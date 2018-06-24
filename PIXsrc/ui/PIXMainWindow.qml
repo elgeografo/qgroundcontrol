@@ -17,6 +17,7 @@ import QGroundControl.Controls  1.0
 
 /// Native QML top level window
 Item {
+    //anchors.centerIn: parent
     function showSetupView() {
         mainWindowInner.item.showSetupView()
     }
@@ -31,15 +32,21 @@ Item {
 
     Label{
         text: "Hola Mundo"
+        x:0
+        y:0
     }
     //parent{title:"PixSwift"}
 
     Loader {
+        //anchors.horizontalCenter: parent.horizontalCenter
+        anchors.centerIn: parent
+        //anchors.fill: parent
+        //anchors.centerIn: parent  // see https://qmlbook.github.io/en/ch04/index.html#layout-items
         source:     "PIXSplashScreen.qml"
         Connections {
             //target: mainWindowInner.item
 
-            onReallyClose: controller.reallyClose()
+            //onReallyClose: controller.reallyClose()
         }
 
     }

@@ -4,4 +4,10 @@
         <file alias="PIXSplashScreen.qml">PIXsrc/ui/PIXSplashScreen.qml</file>
         <file alias="PIXswift/Controls/PIXButton.qml">PIXsrc/QMLControls/PIXButton.qml</file>
     </qresource>
+    <qresource prefix="/img">
+        <file alias="pixswift.svg">PIXsrc/img/pixswiftPlaneSvg.svg</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file alias="thx.mp3">PIXsrc/img/THX Sound Effect.mp3</file>
+    </qresource>
 </RCC>
