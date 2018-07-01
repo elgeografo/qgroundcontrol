@@ -22,3 +22,6 @@ Dentro de la carpeta Resources hemos creado pixswift.qrc y el resto es autoexpli
 Problema. Solo con esto cuando le demos a cerrar al programa, se quedará pillado. Si estamos en ubuntu escribir
 
      sudo pkill -9 -f qgroundcontrol
+
+Enlace del fork:
+https://github.com/elgeografo/qgroundcontrol.git
