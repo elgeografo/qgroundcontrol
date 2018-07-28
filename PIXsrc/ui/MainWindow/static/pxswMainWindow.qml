@@ -20,9 +20,9 @@ Item {
             anchors.verticalCenter:   parent.verticalCenter
         }
 
-        PxswButton{
-            text: "Hola mundo desde botón"
-        }
+        //PxswButton{
+        //    text: "Hola mundo desde botón"
+        //}
 
 
 
