@@ -1105,7 +1105,6 @@ contains (CONFIG, QGC_DISABLE_BUILD_SETUP) {
 # Installer targets
 #
 
-include(QGCInstaller.pri)
 
 DISTFILES += \
     README-LIM.md

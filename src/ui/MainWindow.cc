@@ -150,7 +150,9 @@ MainWindow::MainWindow()
     _mainQmlWidgetHolder->setContextPropertyObject("controller", this);
     _mainQmlWidgetHolder->setContextPropertyObject("debugMessageModel", AppMessages::getModel());
     //_mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/MainWindowHybrid.qml"));
-    _mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/PIXMainWindow.qml"));
+    //_mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:qml/pxsw/MainWindow/thx/PIXMainWindow.qml"));
+    _mainQmlWidgetHolder->setSource(QUrl::fromUserInput("qrc:/qml/PIXsrc/ui/MainWindow/static/pxswMainWindow.qml"));
+    //:/qml/PIXsrc/ui/MainWindow/static/pxswMainWindow.qml
     // Image provider
     QQuickImageProvider* pImgProvider = dynamic_cast<QQuickImageProvider*>(qgcApp()->toolbox()->imageProvider());
     _mainQmlWidgetHolder->getEngine()->addImageProvider(QLatin1String("QGCImages"), pImgProvider);

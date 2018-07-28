@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/qml">
-        <file alias="PIXMainWindow.qml">PIXsrc/ui/PIXMainWindow.qml</file>
-        <file alias="PIXSplashScreen.qml">PIXsrc/ui/PIXSplashScreen.qml</file>
-        <file alias="PIXswift/Controls/PIXButton.qml">PIXsrc/QMLControls/PIXButton.qml</file>
+        <file alias="pxsw/MainWindow/thx/PIXMainWindow.qml">PIXsrc/ui/PIXMainWindow.qml</file>
+        <file alias="pxsw/MainWindow/thx/PIXSplashScreen.qml">PIXsrc/ui/PIXSplashScreen.qml</file>
+        <file>PIXsrc/ui/MainWindow/static/pxswMainWindow.qml</file>
+        <file alias="pxsw/Controls/qmldir">PIXsrc/QmlControls/pxsw.Controls.qmldir</file>
     </qresource>
     <qresource prefix="/img">
         <file alias="pixswift.svg">PIXsrc/img/pixswiftPlaneSvg.svg</file>
